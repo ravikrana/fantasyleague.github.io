@@ -1,3 +1,176 @@
-<html>
-  <div>Hello</div>
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular/angular.min.js"></script>
+	<script src="angular/angular-animate.js"></script>
+	<script src="angular/angular-material.js"></script>
+	<script src="js/ng-flags.js"></script>
+    <script src="app.js"></script>
+	<link href="Fontawesome/font-awesome.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+	
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
+	<link href="angular/angular-material.css" rel="stylesheet">
+    <title>Datametica Fantasy League</title>
+  </head>
+  <body>
+    <div class="fantasy-league" ng-controller="FantasyLeagueController">
+		<div class="header">
+			<img width ="180" height="50"src="images/FantasyLeagueLogo.jpg" >
+			
+			<a target="_blank" href="https://www.facebook.com/datametica1/"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a>
+			<a target="_blank" href="https://twitter.com/DataMetica"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a>
+			<a target="_blank" href="https://www.youtube.com/channel/UCTBR2-f1mDSSpwD0BteETPQ"><i style="border-left:1px solid #032e48;" class="fa fa-2x fa-youtube" aria-hidden="true"></i></a>
+			<span style="float:right;color:white;font-size:18px;padding-top:13px;">follow us&nbsp;</span>
+			<span style="margin-top: 30px;position: absolute;padding-left: 10px;color: #ded0d0;">
+			</span>
+			
+		</div>
+		
+		<!--div class="winnerPanel col-md-12">
+			<div class="leaderChip col-md-2 col-sm-4">
+				<span class="leaderHeader col-md-12"><span >DAILY WINNER</span> <i class="fa fa-trophy"></i></span>
+				<div class="col-md-12">
+				<span class="leaderUser col-md-12" ><img width="20" height="20" src="images/user-icon.png"/> <span>Parag Saxena</span><i style="color:#ffd916;float:right;padding-top:15px;" class="fa fa-trophy" aria-hidden="true"></i></span>
+				
+				<span class="leaderUser col-md-12" ><img width="20" height="20" src="images/user-icon.png"/> <span>Mudit Nagar</span><i style="color:#ecece5;float:right;padding-top:15px;" class="fa fa-trophy" aria-hidden="true"></i></span>
+				<span class="leaderUser col-md-12" ><img width="20" height="20" src="images/user-icon.png"/> <span>Jasvinder Singh Chug</span><i style="color:#d08152;float:right;padding-top:15px;" class="fa fa-trophy" aria-hidden="true"></i></span>
+				</div>
+			</div>
+			<div>
+				
+			</div>
+			<div class="leaderChip col-md-2 col-sm-4">
+				<span class="leaderHeader col-md-12 col-sm-12"><span>OVERALL WINNER</span><i class="fa fa-trophy"></i></span>
+				<div class="col-md-12 col-sm-12">
+				<span class="leaderUser col-md-12 col-sm-6"><img width="20" height="20" src="images/user-icon.png"/> <span>Team Alpha</span><i style="color:#ffd916;float:right;padding-top:15px;" class="fa fa-trophy" aria-hidden="true"></i></span>
+				<span class="leaderUser col-md-12 col-sm-6"><img width="20" height="20" src="images/user-icon.png"/> <span>Team Beta</span><i style="color:#ecece5;float:right;padding-top:15px;" class="fa fa-trophy" aria-hidden="true"></i></span>
+				<span class="leaderUser col-md-12 col-sm-6"><img width="20" height="20" src="images/user-icon.png"/> <span>Team Gamma</span><i style="color:#d08152;float:right;padding-top:15px;" class="fa fa-trophy" aria-hidden="true"></i></span>
+				</div>
+			</div>
+			<div class="leaderChip col-md-2 col-sm-4">
+				<span class="leaderHeader col-md-12"><span>LEAGUE WINNER</span><i class="fa fa-trophy"></i></span>
+				<div class="col-md-12">
+				<span class="leaderUser col-md-12"><img width="20" height="20" src="images/user-icon.png" /> <span>Team Sabastien</span><i style="color:#ffd916;float:right;padding-top:15px;" class="fa fa-trophy" aria-hidden="true"></i></span>
+				<span class="leaderUser col-md-12"><img width="20" height="20" src="images/user-icon.png" /> <span>Team Pidepipper</span><i style="color:#ecece5;float:right;padding-top:15px;" class="fa fa-trophy" aria-hidden="true"></i></span>
+				<span class="leaderUser col-md-12"><img width="20" height="20" src="images/user-icon.png" /> <span>Team Sully</span><i style="color:#d08152;float:right;padding-top:15px;" class="fa fa-trophy" aria-hidden="true"></i></span>
+				</div>
+			</div>
+			
+		
+		</div-->
+		<div class="panelBody">
+			<div class="col-md-11 scoreboardPanel">
+				<div class="col-md-5">
+				<span class="col-md-2"><img style="margin-top:35px" width="90" height="90" src="images/bating.png"/></span>
+				<div style="margin-top:65px" class="col-md-10">
+				<span class="col-md-8" style="color:white;font-size:14px;">Datametica Present</span>
+				<span class="col-md-12" style="color:white;font-size:20px;">Fantasy League Champions Trophy 2017</span>
+				</div>
+				</div>
+				<div class="col-md-7">
+					<img class="col-md-5" style="margin-left:15%"width="300px" height="120px" src="images/running.gif"/>
+					<div class="leaderChip col-md-5">
+						<span class="leaderHeader col-md-12"><span >Yesterday Winner</span> <i class="fa fa-trophy"></i></span>
+							<div width="150" style="background:#f1a351;" class="col-md-12">
+								<img class="col-md-6" height="100" width="100" ng-src="{{selectedUserImage}}"/>
+								<span style="color:white;font-size:12px;">RAVI KUMAR RANA</span><br/>
+								<span style="color:white;font-size:12px; padding-top:55px;position:absolute;" class="matchName"><flag country="pk" size="16"></flag>PAK VS <flag country="in" size="16"></flag>IND</span>
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+			
+			<div style="margin-left:2%;" class="leaderTable col-md-6">
+			<div class="leaderboardPanelHeader">Leaderboard Individual<span class="matchName"> Match 1 <flag country="pk" size="16"></flag>PAK VS <flag country="in" size="16"></flag>IND</span><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+			<table class="table table-hover table-responsive table-striped">
+				<thead>
+					<tr>
+						<th ng-class="selectedCls('name')" ng-click="changeSorting('name')">
+							Name <i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+								<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
+						</th>
+						<th ng-class="selectedCls('league')" ng-click="changeSorting('league')">League 
+							<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+							<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
+						</th>
+						<th ng-class="selectedCls('date')" ng-click="changeSorting('yesterdayPoint')">Yesterday's Point 
+						<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+							<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
+						</th>
+						<th ng-class="selectedCls('date')" ng-click="changeSorting('total')">Total 
+						<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+							<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
+						</th>
+						<th ng-class="selectedCls('date')" ng-click="changeSorting('rank')">Rank
+							<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+							<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
+						</th>
+					</tr>
+				</thead>
+				<div style="overflow:auto;max-height:100px">
+				<tbody >
+					<tr ng-repeat="item in data1 | orderBy:sort.column:sort.descending">
+          <!-- .$orderBy(sort.column, sort.descending) -->
+						<td>{{item.name}}</td>
+						<td>{{item.league}}</td>
+						<td>{{item.yesterdayPoint}}</td>
+						<td>{{item.total}}</td>
+						<td>{{item.rank}}</td>
+					</tr>
+				</tbody>
+				</div>
+			</table>
+			</div>
+			
+			<div style="margin-left: 10px;" class="leaderTable col-md-5">
+			<div class="leaderboardPanelHeader">Leaderboard Team </div>
+			<table class="table table-hover table-responsive table-striped">
+				<thead>
+					<tr>
+						<th ng-class="selectedCls('id')" ng-click="changeSorting('name')">
+							Team Name <i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+								<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
+						</th>
+						<th ng-class="selectedCls('date')" ng-click="changeSorting('yesterdayPoint')">Yesterday Points 
+							<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+							<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
+						</th>
+						<th ng-class="selectedCls('date')" ng-click="changeSorting('date')">Total Points 
+						<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+							<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
+						</th>
+						<th ng-class="selectedCls('date')" ng-click="changeSorting('rank')">Rank
+						<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+							<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
+						</th>
+					</tr>
+				</thead>
+				<tbody style="overflow:auto;max-height:400px">
+					<tr ng-repeat="item in data | orderBy:sort.column:sort.descending">
+          <!-- .$orderBy(sort.column, sort.descending) -->
+						<td>{{item.name}}</td>
+						<td>{{item.yesterdayPoint}}</td>
+						<td>{{item.total}}</td>
+						<td>{{item.rank}}</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			</div>
+			<div ng-show="showQuick" style="background:white;min-width:200px;min-height:110px;margin-left:2.6%;margin-top:3%" class="col-md-3" >
+				<a style="margin-top:10px;" class="col-md-12"><img width="20" height="20" src="images/stump.png"/>&nbsp;ICC Champion League</a>
+				<a style="margin-top:10px;" class="col-md-12"><img width="20" height="20" src="images/stump.png"/>&nbsp;IPL Champion League</a>
+				
+			</div>
+			<div style="background:#f1a351;" class="letterP4" ng-click="showQuick = !showQuick">Quick Link</div>
+			
+		</div>
+		
+    </div>
+  </body>
 </html>

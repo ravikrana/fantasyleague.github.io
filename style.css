@@ -1,0 +1,152 @@
+.text-orientation {
+    /* text-orientation only works on vertical text */
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    /* basic styling for demo */
+    margin-top: -8px;
+    float: right;
+	position:absolute;
+	color:#e5f3f7;
+	background:#fda343;
+	z-index:10;
+	font-size:12px;
+}
+
+/* start of styles for testing each text-orientation value */
+ .mixed {
+    -webkit-text-orientation: mixed;
+    -moz-text-orientation: mixed;
+    -ms-text-orientation: mixed;
+    text-orientation: mixed;
+}
+
+.fantasy-league .header{
+background:#fda343;
+min-height:50px;
+}
+.fantasy-league .header img{
+margin-bottom:-3px;
+}
+.fantasy-league .header i{
+float: right;
+color:white;
+padding-left:10px;
+margin-right:10px;
+padding-top:10px;
+padding-bottom:10px;
+}
+.fantasy-league .scoreboardPanel{
+	background:url('images/grid1.jpg');
+	opacity:0.85;
+	margin-left:3%;
+	margin-top:1%;
+	min-height:150px;
+}
+.fantasy-league .header .fa-facebook:hover{
+	cursor:pointer;
+	color:#3b5998;
+}
+.fantasy-league .header .fa-twitter:hover{
+	cursor:pointer;
+	color:#00aced;;
+}
+.fantasy-league .header .fa-youtube:hover{
+	cursor:pointer;
+	color:red;
+}
+.letterP4 {    
+  -webkit-transform: rotate(-90deg); 
+     -moz-transform: rotate(-90deg); 
+      -ms-transform: rotate(-90deg); 
+       -o-transform: rotate(-90deg); 
+          transform: rotate(-90deg);
+            color: #000;
+            font-size: 22px;                
+	color:white;
+	margin-left:-47px;
+	padding-left:5px;
+	padding-right:5px;
+    float: left;
+    vertical-align:top;
+	margin-top:5.4%;
+}
+
+.fantasy-league .winnerPanel{
+background:black;
+min-height:140px;
+}
+.fantasy-league .panelBody{
+	 background-image: url('images/cricket.jpg');
+	 min-height:720px;
+	 opacity: 0.7;
+}
+.fantasy-league .winnerPanel .leaderChip{
+background:#106ea7;
+min-height:80px;
+min-width:200px;
+margin-top:10px;
+margin-left:20px;
+padding-left:0px;
+padding-right:0px;
+}
+.fantasy-league .leaderTable {
+	margin-top:20px;
+	margin-right:20px;
+	
+}
+.fantasy-league .leaderboardPanelHeader{
+	color:#e5f3f7;
+	padding-left:10px;
+	padding-top:2px;
+}
+.fantasy-league .leaderboardPanelHeader .matchName{
+	margin-left:200px;
+}
+.fantasy-league .leaderTable{
+	background:white;
+	padding-left:0px;
+	padding-right:0px;
+}
+.fantasy-league .leaderboardPanelHeader{
+	min-height:30px;
+	background:#fda343;
+}
+.fantasy-league  .leaderChip .leaderHeader {
+	font-size:13px;
+	color:#e5f3f7;
+	background:#f99224;
+	min-height:30px;
+	width:100%;
+	margin-top:10px;
+}
+.fantasy-league  .leaderChip .leaderHeader  span{
+	padding-left:10px;
+	padding-top:5px;
+	position:absolute;
+}
+.fantasy-league  .leaderChip .leaderHeader i{
+	padding-top:5px;
+	float:right;
+	padding-right:10px;
+	
+}
+ .fantasy-league  .leaderChip .leaderUser{
+	 padding-left:10px;
+	 color:#e5f3f7;
+	 font-size:10px;
+	 
+ }
+  .fantasy-league  .leaderChip .leaderUser img{
+	margin-top:10px;
+  }
+  .fantasy-league  .leaderChip .leaderUser span{
+      margin-top: 15px;
+    padding-left: 5px;
+    position: absolute;
+  }
+  
+  /*Table specific css*/
+  
