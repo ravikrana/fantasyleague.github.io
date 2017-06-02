@@ -39,7 +39,8 @@ padding-top:10px;
 padding-bottom:10px;
 }
 .fantasy-league .scoreboardPanel{
-	background:url('images/grid1.jpg');
+	background:url('images/grid.jpg');
+	background-color: #cccccc;
 	opacity:0.85;
 	margin-left:3%;
 	margin-top:1%;
@@ -80,6 +81,8 @@ min-height:140px;
 }
 .fantasy-league .panelBody{
 	 background-image: url('images/cricket.jpg');
+	 background-size: 100% 100%;
+    background-repeat: no-repeat;
 	 min-height:720px;
 	 opacity: 0.7;
 }
