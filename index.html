@@ -67,18 +67,18 @@
 				<div class="col-md-5">
 				<span class="col-md-2"><img style="margin-top:35px" width="90" height="90" src="images/bating.png"/></span>
 				<div style="margin-top:65px" class="col-md-10">
-				<span class="col-md-8" style="color:white;font-size:14px;">Datametica Presents</span>
-				<span class="col-md-12" style="color:white;font-size:20px;">Fantasy League Champions Trophy 2017</span>
+				<span class="col-md-8" style="color:black;font-size:14px;">Datametica Presents</span>
+				<span class="col-md-12" style="color:black;font-size:20px;">Fantasy League Champions Trophy 2017</span>
 				</div>
 				</div>
 				<div class="col-md-7">
-					<img class="col-md-5" style="margin-left:15%"width="300px" height="120px" src="images/running.gif"/>
+					
 					<div class="leaderChip col-md-5">
 						<span class="leaderHeader col-md-12"><span >Yesterday's Winner</span> <i class="fa fa-trophy"></i></span>
 							<div width="150" style="background:#f1a351;" class="col-md-12">
-								<img class="col-md-6" height="100" width="100" ng-src="{{selectedUserImage}}"/>
-								<span style="color:white;font-size:12px;">RAVI KUMAR RANA</span><br/>
-								<span style="color:white;font-size:12px;margin-top:10%;" class="matchName"><flag country="pk" size="16"></flag>PAK VS <flag country="in" size="16"></flag>IND</span>
+								<img class="col-md-6" height="100" width="100" ng-src="images/winner.jpg"/>
+								<span style="color:black;font-size:12px;font-weight:bold">Hitesh Patel</span><br/>
+								<!--span style="color:black;font-size:12px;margin-top:10%;" class="matchName"><flag country="pk" size="16"></flag>PAK VS <flag country="in" size="16"></flag>IND</span-->
 							</div>
 					</div>
 				</div>
@@ -87,16 +87,12 @@
 			
 			<div style="margin-left:2%;" class="leaderTable col-md-6">
 			<div class="leaderboardPanelHeader">Leaderboard Individual<span class="matchName"> Match 1 <flag country="pk" size="16"></flag>PAK VS <flag country="in" size="16"></flag>IND</span><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-			<table class="table table-hover table-responsive table-striped">
+			<!--table class="table table-hover table-responsive table-striped">
 				<thead>
 					<tr>
 						<th ng-class="selectedCls('name')" ng-click="changeSorting('name')">
-							Name <i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+							Team Name <i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
 								<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
-						</th>
-						<th ng-class="selectedCls('league')" ng-click="changeSorting('league')">League 
-							<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
-							<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
 						</th>
 						<th ng-class="selectedCls('date')" ng-click="changeSorting('yesterdayPoint')">Yesterday's Point 
 						<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
@@ -114,32 +110,73 @@
 				</thead>
 				<div style="overflow:auto;max-height:100px">
 				<tbody >
-					<tr ng-repeat="item in data1 | orderBy:sort.column:sort.descending">
-          <!-- .$orderBy(sort.column, sort.descending) -->
-						<td>{{item.name}}</td>
-						<td>{{item.league}}</td>
+					<tr ng-repeat="item in tournament | orderBy:Total">
+          
+					
+						<td>{{item.properties.Team}}</td>
 						<td>{{item.yesterdayPoint}}</td>
-						<td>{{item.total}}</td>
-						<td>{{item.rank}}</td>
+						<td>{{item.properties.Total}}</td>
+						<td>{{$index+1}}</td>
 					</tr>
 				</tbody>
 				</div>
-			</table>
+			</table-->
+			<div class="ecat-table" >
+
+                <div class="table-head">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+							<th  width="18%">Rank
+                            </th>
+                            <th class="showBorder" width="18%">Team Name
+                            </th>
+                            <th  width="18%">Owner
+                            </th>
+							 <th  width="18%">Yesterday's Point
+                            </th>
+							 <th  width="20%">Total
+                            </th>
+							 
+						</tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="table-body ecat-scrollnew showBottomBorder" scroll-change >
+                    <table class="table table-striped summary" >
+                        <tbody>
+                      
+                        <tr class="topTable" ng-repeat="item in tournament | orderBy:'properties.Total':true ">
+							<td width="20%">{{$index + 1}}
+                            </td>
+                        	<td width="20%" class="showBorder">{{item.properties.Team_Name}}
+                            </td>
+                            <td width="20%">{{item.properties.Manager}}
+                            </td>
+							 <td width="20%">{{item.properties.Match3}}
+                            </td>
+							 <td width="20%">{{item.properties.Total}}
+                            </td>
+							
+						</tr>
+						</tbody>
+                    </table>
+                </div>
+
+            </div>
 			</div>
 			
 			<div style="margin-left: 10px;" class="leaderTable col-md-5">
 			<div class="leaderboardPanelHeader">Leaderboard Team </div>
-			<table class="table table-hover table-responsive table-striped">
+			<!--table class="table table-hover table-responsive table-striped">
 				<thead>
 					<tr>
 						<th ng-class="selectedCls('id')" ng-click="changeSorting('name')">
-							Team Name <i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
+							Group Name <i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
 								<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
 						</th>
-						<th ng-class="selectedCls('date')" ng-click="changeSorting('yesterdayPoint')">Yesterday Points 
-							<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
-							<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
-						</th>
+						
 						<th ng-class="selectedCls('date')" ng-click="changeSorting('date')">Total Points 
 						<i class="glyphicon glyphicon-sort-by-alphabet-alt" ng-show="sort.descending"></i>
 							<i class="glyphicon glyphicon-sort-by-alphabet" ng-show="!sort.descending"></i>
@@ -152,22 +189,55 @@
 				</thead>
 				<tbody style="overflow:auto;max-height:400px">
 					<tr ng-repeat="item in data | orderBy:sort.column:sort.descending">
-          <!-- .$orderBy(sort.column, sort.descending) -->
+          
 						<td>{{item.name}}</td>
-						<td>{{item.yesterdayPoint}}</td>
 						<td>{{item.total}}</td>
 						<td>{{item.rank}}</td>
 					</tr>
 				</tbody>
-			</table>
+			</table-->
+			<div class="ecat-table" >
+
+                <div class="table-head">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th class="showBorder" width="33%">Group Name
+                            </th>
+                            <th  width="33%">Total
+                            </th>
+							 <th  width="33%">Rank
+                            </th>
+							 
+						</tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div style="width:41%" class="table-body ecat-scrollnew showBottomBorder" scroll-change >
+                    <table class="table table-striped summary" >
+                        <tbody>
+                      
+                        <tr class="topTable" ng-repeat="item in leagueTotal | orderBy:Total">
+                        	<td width="25%" class="showBorder">{{item.Group_Name}}
+                            </td>
+                            <td width="25%">{{item.Group_Total}}
+                            </td>
+							 <td width="25%">{{$index + 1}}
+                            </td>
+						</tr>
+						</tbody>
+                    </table>
+                </div>
+
+            </div>
 			</div>
 			</div>
-			<div ng-show="showQuick" style="background:white;min-width:200px;min-height:110px;margin-left:2.6%;margin-top:3%" class="col-md-3" >
-				<a style="margin-top:10px;" class="col-md-12"><img width="20" height="20" src="images/stump.png"/>&nbsp;ICC Champion League</a>
-				<a style="margin-top:10px;" class="col-md-12"><img width="20" height="20" src="images/stump.png"/>&nbsp;IPL Champion League</a>
+			<div style="background:white;min-width:200px;min-height:110px;margin-left:2.6%;margin-top:20%" class="col-md-3" >
+				<a href="http://fantasy.icc-cricket.com/" target ="_blank" style="margin-top:10px;" class="col-md-12"><img width="20" height="20" src="images/stump.png"/>&nbsp;ICC Champion League</a>
 				
 			</div>
-			<div style="background:#f1a351;" class="letterP4" ng-click="showQuick = !showQuick">Quick Link</div>
+			<div style="background:#f1a351;margin-top:22.5%" class="letterP4" >Quick Link</div>
 			
 		</div>
 		
