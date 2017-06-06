@@ -121,10 +121,12 @@ float:right;
 .ecat-table .table-body table tbody tr td{
     word-break: break-word;
 }
+a:hover{
+	text-decoration:none;
+}
 .table-body{
-	max-height: 200px;
-    position: fixed;
-    width: 49%;
+	max-height: 300px;
+    width: 100%;
     overflow: auto;
     background: aliceblue;
 }

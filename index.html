@@ -68,7 +68,7 @@
 				<span class="col-md-2"><img style="margin-top:35px" width="90" height="90" src="images/bating.png"/></span>
 				<div style="margin-top:65px" class="col-md-10">
 				<span class="col-md-8" style="color:black;font-size:14px;">Datametica Presents</span>
-				<span class="col-md-12" style="color:black;font-size:20px;">Fantasy League Champions Trophy 2017</span>
+				<span class="col-md-12" style="color:black;font-size:20px;"><a style="margin-left:-20px;" href="http://fantasy.icc-cricket.com/" target ="_blank" style="margin-top:10px;" class="col-md-12">Fantasy League Champions Trophy 2017</a></span>
 				</div>
 				</div>
 				<div class="col-md-7">
@@ -85,7 +85,7 @@
 			</div>
 			<div class="col-md-12">
 			
-			<div style="margin-left:2%;" class="leaderTable col-md-6">
+			<div style="margin-left:2%;" class="leaderTable col-md-7">
 			<div class="leaderboardPanelHeader">Leaderboard Individual<span class="matchName"> Match 3 <flag country="pk" size="16"></flag>PAK VS <flag country="in" size="16"></flag>IND</span> <span style="color:black;font-size:12px;font-weight:bold;padding-left:15px;">04/06/2017</span></div>
 			<!--table class="table table-hover table-responsive table-striped">
 				<thead>
@@ -127,15 +127,17 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-							<th  width="18%">Rank
+							<th  width="16%">Rank
                             </th>
-                            <th class="showBorder" width="18%">Team Name
+                            <th class="showBorder" width="16%">Team Name
                             </th>
-                            <th  width="18%">Owner
+                            <th  width="16%">Owner
                             </th>
-							 <th  width="18%">Yesterday's Point
+							<th  width="16%">Group Name
                             </th>
-							 <th  width="20%">Total
+							 <th  width="16%">Yesterday's Point
+                            </th>
+							 <th >Total
                             </th>
 							 
 						</tr>
@@ -148,15 +150,17 @@
                         <tbody>
                       
                         <tr class="topTable" ng-repeat="item in tournament | orderBy:'properties.Total':true ">
-							<td width="20%">{{$index + 1}}
+							<td width="16%">{{$index + 1}}
                             </td>
-                        	<td width="20%" class="showBorder">{{item.properties.Team_Name}}
+                        	<td width="16%" class="showBorder">{{item.properties.Team_Name}}
                             </td>
-                            <td width="20%">{{item.properties.Manager}}
+                            <td width="16%">{{item.properties.Manager}}
                             </td>
-							 <td width="20%">{{item.properties.Match3}}
+							<td width="16%">{{item.properties.Group_Name}}
                             </td>
-							 <td width="20%">{{item.properties.Total}}
+							 <td width="16%">{{item.properties.Match3}}
+                            </td>
+							 <td width="16%">{{item.properties.Total}}
                             </td>
 							
 						</tr>
@@ -167,7 +171,7 @@
             </div>
 			</div>
 			
-			<div style="margin-left: 10px;" class="leaderTable col-md-5">
+			<div style="margin-left: 10px;" class="leaderTable col-md-4">
 			<div class="leaderboardPanelHeader">Leaderboard Team </div>
 			<!--table class="table table-hover table-responsive table-striped">
 				<thead>
@@ -214,7 +218,7 @@
                     </table>
                 </div>
 
-                <div style="width:41%" class="table-body ecat-scrollnew showBottomBorder" scroll-change >
+                <div class="table-body ecat-scrollnew showBottomBorder" scroll-change >
                     <table class="table table-striped summary" >
                         <tbody>
                       
@@ -233,11 +237,7 @@
             </div>
 			</div>
 			</div>
-			<div style="background:white;min-width:200px;min-height:110px;margin-left:2.6%;margin-top:20%" class="col-md-3" >
-				<a href="http://fantasy.icc-cricket.com/" target ="_blank" style="margin-top:10px;" class="col-md-12"><img width="20" height="20" src="images/stump.png"/>&nbsp;ICC Champion League</a>
-				
-			</div>
-			<div style="background:#f1a351;margin-top:22.5%" class="letterP4" >Quick Link</div>
+			
 			
 		</div>
 		
