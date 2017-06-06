@@ -127,13 +127,13 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-							<th  width="16%">Rank
+							<th  width="10%">Rank
                             </th>
-                            <th class="showBorder" width="16%">Team Name
+                            <th class="showBorder" width="18%">Team Name
                             </th>
-                            <th  width="16%">Owner
+                            <th  width="18%">Owner
                             </th>
-							<th  width="16%">Group Name
+							<th  width="18%">Group Name
                             </th>
 							 <th  width="16%">Yesterday's Point
                             </th>
@@ -150,17 +150,17 @@
                         <tbody>
                       
                         <tr class="topTable" ng-repeat="item in tournament | orderBy:'properties.Total':true ">
-							<td width="16%">{{$index + 1}}
+							<td width="10%">{{$index + 1}}
                             </td>
-                        	<td width="16%" class="showBorder">{{item.properties.Team_Name}}
+                        	<td width="19%" class="showBorder">{{item.properties.Team_Name}}
                             </td>
-                            <td width="16%">{{item.properties.Manager}}
+                            <td width="19%">{{item.properties.Manager}}
                             </td>
-							<td width="16%">{{item.properties.Group_Name}}
+							<td width="19%">{{item.properties.Group_Name}}
                             </td>
 							 <td width="16%">{{item.properties.Match3}}
                             </td>
-							 <td width="16%">{{item.properties.Total}}
+							 <td width="">{{item.properties.Total}}
                             </td>
 							
 						</tr>
@@ -206,12 +206,13 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th class="showBorder" width="33%">Group Name
+							<th  width="18%">Rank
                             </th>
-                            <th  width="33%">Total
+                            <th class="showBorder" width="40%">Group Name
                             </th>
-							 <th  width="33%">Rank
+                            <th  width="40%">Total
                             </th>
+							 
 							 
 						</tr>
                         </thead>
@@ -223,12 +224,13 @@
                         <tbody>
                       
                         <tr class="topTable" ng-repeat="item in leagueTotal | orderBy:Total">
-                        	<td width="25%" class="showBorder">{{item.Group_Name}}
+							<td width="18%">{{$index + 1}}
                             </td>
-                            <td width="25%">{{item.Group_Total}}
+                        	<td width="40%" class="showBorder">{{item.Group_Name}}
                             </td>
-							 <td width="25%">{{$index + 1}}
+                            <td width="40%">{{item.Group_Total}}
                             </td>
+							 
 						</tr>
 						</tbody>
                     </table>
